@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: test-1-certificate
+  namespace: test-1
+spec:
+  secretName: test-1-tls-secret
+  issuerRef:
+    name: ssl-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - test-1.kube-prod-1.clcreative.home
